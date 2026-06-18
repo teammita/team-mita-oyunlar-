@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hafıza Oyunu</title>
+    <style>
+        body { background: #000; color: #fff; text-align: center; font-family: sans-serif; }
+        #grid { display: grid; grid-template-columns: repeat(3, 100px); gap: 10px; justify-content: center; margin-top: 20px; }
+        .kart { width: 100px; height: 100px; background: #444; cursor: pointer; line-height: 100px; border: 2px solid #f1c40f; font-size: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Hafıza Oyunu</h1>
+    <div id="grid"></div>
+    <br><a href="index.html" style="color: #f1c40f;">Ana Sayfaya Dön</a>
+    <script>
+        const grid = document.getElementById('grid');
+        const kartlar = ['🍎', '🍎', '🍌', '🍌', '🍇', '🍇'].sort(() => Math.random() - 0.5);
+        
+        kartlar.forEach(s => {
+            const d = document.createElement('div');
+            d.className = 'kart'; 
+            d.textContent = '?';
+            d.onclick = () => { 
+                d.textContent = s; 
+                d.style.background = '#f1c40f'; 
+                d.style.color = '#000';
+            };
+            grid.appendChild(d);
+        });
+    </script>
+</body>
+</html>

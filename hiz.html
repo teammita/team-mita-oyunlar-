@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tıklama Oyunu</title>
+    <style>
+        body { background: #1976d2; color: #fff; text-align: center; font-family: sans-serif; }
+        button { padding: 20px; font-size: 20px; margin-top: 50px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Tıklama Oyunu</h1>
+    <h2 id="skor">Skor: 0</h2>
+    <button onclick="artir()">TIKLA!</button>
+    <script>
+        let skor = 0;
+        function artir() { skor++; document.getElementById('skor').innerText = "Skor: " + skor; }
+    </script>
+    <br><br><a href="index.html" style="color:white;">Ana Sayfaya Dön</a>
+</body>
+</html>
